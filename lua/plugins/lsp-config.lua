@@ -20,14 +20,6 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 
-			local on_attach = function(client, bufnr)
-				require("tailwindcss-colors").buf_attach(bufnr)
-			end
-
-			lspconfig["tailwindcss"].setup({
-				on_attach = on_attach,
-			})
-
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})
@@ -35,7 +27,6 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.tailwindcss.setup({
-				on_attach = on_attach,
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
