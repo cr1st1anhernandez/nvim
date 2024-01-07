@@ -7,7 +7,7 @@ return {
 		require("tokyonight").setup({
 			style = "night",
 			on_colors = function(colors)
-        colors.bg = "#11111B"
+        colors.bg = "#16161e"
 			end,
 		})
 		vim.cmd([[colorscheme tokyonight-night]])
