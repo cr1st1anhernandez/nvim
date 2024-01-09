@@ -15,6 +15,8 @@ vim.cmd("hi IlluminatedWordWrite guibg=none gui=underline")
 
 vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true, silent = true })
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
 vim.keymap.set(
   "n",
   "<Leader>q",
