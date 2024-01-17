@@ -3,7 +3,7 @@ return {
 		"williamboman/mason.nvim",
 		lazy = false,
 		config = function()
-			require("mason").setup()
+			require("mason").setup({})
 		end,
 	},
 	{
@@ -27,6 +27,10 @@ return {
 			})
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
+				cmd = {
+					"jdtls",
+					"--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand("$MASON/share/jdtls/lombok.jar")),
+				},
 			})
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
